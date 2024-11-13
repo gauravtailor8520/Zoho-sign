@@ -1,5 +1,4 @@
 .env
-__pycache__/
-venv/
-*.pyc
-instance/
+envm
+Lib/site-packages
+Scripts
