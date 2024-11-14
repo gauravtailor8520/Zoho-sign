@@ -1,62 +1,135 @@
-<!-- Save this EXACTLY as shown in app/templates/contract.html -->
-{% extends "base.html" %}
-
-{% block content %}
-<div class="contract-container">
-    <div class="contract-header">
-        <h1>Service Agreement</h1>
-        <p>Between XYZ Solutions Inc. ("Company") and the Client</p>
-    </div>
-    
-    <div class="contract-body">
-        <h2>Terms and Conditions</h2>
-        <p>This Service Agreement ("Agreement") is made effective as of the date of signing by and between XYZ Solutions Inc., with its principal place of business at 123 Main Street, Suite 500, Anytown, CA 12345 ("Company"), and the undersigned client ("Client").</p>
-        
-        <div class="contract-terms">
-            <h3>1. Services</h3>
-            <p>XYZ Solutions Inc. agrees to provide the Client with the following services:</p>
-            <ul>
-                <li>Consulting services related to digital transformation and technology strategy.</li>
-                <li>Development and maintenance of custom software solutions.</li>
-                <li>Data analysis and business intelligence reporting.</li>
-            </ul>
-            <p>Additional services requested by the Client may incur additional fees.</p>
-            
-            <h3>2. Payment Terms</h3>
-            <p>The Client agrees to pay XYZ Solutions Inc. for the services outlined as follows:</p>
-            <ul>
-                <li><strong>Service Fees:</strong> Payment will be based on an hourly rate of $100, invoiced monthly.</li>
-                <li><strong>Payment Schedule:</strong> All payments are due within 30 days of the invoice date.</li>
-                <li><strong>Late Fees:</strong> Late payments will incur a 1.5% monthly fee.</li>
-            </ul>
-            
-            <h3>3. Term and Termination</h3>
-            <p>This Agreement will commence on the date of signing and will continue until all services are completed or until terminated by either party. Termination may occur by written notice with a 30-day period. Any fees for work performed up to the termination date will be due.</p>
-            
-            <h3>4. Confidentiality</h3>
-            <p>Both parties agree to maintain confidentiality of all proprietary information shared during the course of this Agreement, including but not limited to trade secrets, business practices, and client information.</p>
-            
-            <h3>5. Liability</h3>
-            <p>XYZ Solutions Inc. shall not be held liable for any indirect, special, or consequential damages arising from this Agreement. Liability for any direct damages is limited to the amount paid by the Client for the services provided.</p>
-            
-            <h3>6. Governing Law</h3>
-            <p>This Agreement shall be governed by and interpreted in accordance with the laws of the State of California.</p>
-        </div>
-    </div>
-    
-    <div class="signature-section">
-        <h3>Signature</h3>
-        <form action="{{ url_for('main.sign') }}" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Template</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f5f5dc; /* Light beige */
+            color: #4b0082; /* Indigo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #800080; /* Purple */
+            margin: 0;
+        }
+        header img {
+            width: 80px;
+            margin-top: 10px;
+        }
+        section {
+            flex: 1;
+            padding-right: 20px;
+        }
+        section h2 {
+            color: #cd5c5c; /* Indian Red */
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #fffafa; /* Snow white */
+            color: #8b4513; /* Saddle brown */
+            resize: none;
+            line-height: 1.5;
+        }
+        form {
+            flex: 1;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 1.1rem;
+            color: #4b0082; /* Indigo */
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #8a2be2; /* Blue Violet */
+            font-size: 1rem;
+            color: #333;
+        }
+        #btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+            background-color: #9932cc; /* Dark Orchid */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        #btn:hover {
+            background-color: #7b68ee; /* Medium Slate Blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <header>
+                <h1>Contract or Information</h1>
+                
+            </header>
+            <h2>Terms and Conditions</h2>
+            <p>By signing this contract, you agree to the following terms and conditions:</p>
+            <textarea name="terms" rows="5" readonly>
+                This agreement is between you ("You" or "Your") and ABC Corporation ("ABC"), governing your use of ABC's suite of online business productivity software. By signing, you acknowledge that you have read, understood, and agree to abide by the terms and conditions outlined here.
+            </textarea>
+        </section>
+        <form action="/sign" method="post">
             <div class="form-group">
-                <label for="client-name">Client Name:</label>
-                <input type="text" id="client-name" name="client_name" required>
+                <label for="signer_name">Signer's Full Name:</label>
+                <input type="text" id="signer_name" name="signer_name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
-                <label for="date-signed">Date:</label>
-                <input type="date" id="date-signed" name="date_signed" required>
+                <label for="signer_email">Email:</label>
+                <input type="email" id="signer_email" name="signer_email" placeholder="Enter your email" required>
             </div>
-            <button type="submit" class="sign-button">Sign Document</button>
+            <div class="form-group">
+                <label for="sign_date">Date:</label>
+                <input type="date" id="sign_date" name="sign_date" required>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" placeholder="Enter your signature" required>
+            </div>
+            <button id="btn" type="submit">Sign Contract</button>
         </form>
     </div>
-</div>
-{% endblock %}
+</body>
+</html>
