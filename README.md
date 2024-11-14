@@ -1,36 +1,24 @@
-Zoho Developer Assignment
+# Zoho Developer Assignment - Document Sign
 
-Overview:
-This repository contains the solution for the developer assignment provided by Propques for the Developer position. The assignment involves solving a problem related to Zoho's technical requirements.
+Hey there! 👋 Welcome to my solution for the **Zoho Developer Assignment**. This project was built as part of the developer assessment by **Propques**. Here, I tackle a real-world problem of digital document signing, using a well-structured approach to make the experience intuitive, reliable, and scalable.
 
-Problem Statement:
-The assignment requires the implementation of a specific functionality (mention the specific problem here if applicable) and submission by 13th November 2024. The solution is implemented using appropriate data structures, algorithms, and best coding practices to ensure efficiency and scalability.
+## 📜 Overview
 
-Features:
-- Feature 1: (Describe a key feature of your solution)
-- Feature 2: (Describe another key feature of your solution)
-- Feature 3: (Mention any additional features or unique aspects)
+The project revolves around creating a functional document-signing tool. This app lets users securely sign digital documents, like contracts and agreements, all from a web interface. Built with clean code principles and efficient algorithms, this app is ready to handle business needs with both speed and security.
 
-Installation:
+## 🚀 Features
 
-1. Clone the repository to your local machine:
+Here’s what my app has to offer:
+
+- **Secure Signatures**: Ensures that signatures are collected safely and stored properly.
+- **User-Friendly Interface**: A responsive, intuitive UI for a smooth signing process.
+- **Instant Access**: Sign and access documents anytime, anywhere, with cloud-based integration.
+- **Form Validation**: Ensures users input required information correctly and safely.
+
+## 🔧 Installation
+
+Setting up the project locally is super easy. Just follow these steps:
+
+1. **Clone the repository**:
+   ```bash
    git clone https://github.com/gauravtailor8520/Zoho-sign.git
-
-2. Navigate to the project folder:
-   cd Zoho-sign
-
-3. Install the required dependencies (if applicable):
-   pip install -r requirements.txt
-
-Usage:
-Once the setup is complete, run the project using the following command (adjust depending on your project setup):
-   python main.py
-Follow the prompts or instructions provided in the code to interact with the program.
-
-Contributing:
-If you wish to contribute or suggest improvements to this repository, feel free to fork the project and submit a pull request. Please ensure that any changes you make are well-tested and follow the project's coding standards.
-
-License:
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-App URL: (https://document-sign-wahf.onrender.com/)
