@@ -2,6 +2,8 @@
 
 Hey there! 👋 Welcome to my solution for the **Zoho Developer Assignment**. This project was built as part of the developer assessment by **Propques**. Here, I tackle a real-world problem of digital document signing, using a well-structured approach to make the experience intuitive, reliable, and scalable.
 
+![Screenshot 2024-11-14 120015](https://github.com/user-attachments/assets/803edd4d-37f0-4d5a-9513-e9d4f029942b)
+
 
 ## 📜 Overview
 
